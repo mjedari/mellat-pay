@@ -1,0 +1,57 @@
+{
+    "name": "mjedari/mellat-pay",
+    "description": "Iranian Mellat Bank gateway package",
+    "keywords": [
+        "laravel",
+        "php",
+        "mellat",
+        "bank",
+        "iran",
+        "payment",
+        "gateway"
+    ],
+    "homepage": "https://github.com/mjedari/mellat-pay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mahdi Jedari",
+            "email": "i.jedari@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.73",
+        "illuminate/support": "^8.8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.22",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mjedari\\MellatPay\\": "src",
+            "Mjedari\\MellatPay\\Database\\Factories\\": "database/factories"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mjedari\\MellatPay\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mjedari\\MellatPay\\MellatPayServiceProvider"
+            ],
+            "aliases": {
+                "MellatPay": "Mjedari\\MellatPay\\Facades\\MellatPay"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
