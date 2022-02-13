@@ -56,6 +56,7 @@ class Gateway
             Log::emergency("bpPayRequest return status is not 0");
         } catch (\SoapFault $e) {
             Log::emergency("SoapFault in bpPayRequest request: ".$e->getMessage());
+            throw $e;
         }
     }
 
@@ -78,6 +79,7 @@ class Gateway
             Log::emergency("VerifyPayment failed with code: ".$response->return);
         } catch (\SoapFault $e) {
             Log::emergency("VerifyPayment failed with message: ".$e->getMessage());
+            throw $e;
         }
     }
 
@@ -102,6 +104,7 @@ class Gateway
             return GatewayResponse::response($response);
         } catch (\SoapFault $e) {
             Log::emergency("Error in client soap request: ".$e->getMessage());
+            throw $e;
         }
     }
 
@@ -122,7 +125,7 @@ class Gateway
             return GatewayResponse::response($response);
         } catch (\SoapFault $e) {
             Log::emergency("Error in client soap request: ".$e->getMessage());
-            return $e;
+            throw $e;
         }
     }
 
@@ -135,7 +138,7 @@ class Gateway
             return GatewayResponse::response($response);
         } catch (\SoapFault $e) {
             Log::emergency("Error in client soap request: ".$e->getMessage());
-            return $e;
+            throw $e;
         }
     }
 
@@ -148,7 +151,7 @@ class Gateway
             return GatewayResponse::response($response);
         } catch (\SoapFault $e) {
             Log::emergency("Error in client soap request: ".$e->getMessage());
-            return $e;
+            throw $e;
         }
     }
 

@@ -38,10 +38,10 @@ class TransactionService extends Gateway
     {
         $data = [
             'orderId' => $this->transaction->id,
-            'price' => $this->transaction->price,
+            'amount' => $this->transaction->price,
             'localDate' => now()->format('Ymd'),
             'localTime' => now()->format('His'),
-            'callBackUrl' => $this->callback ?? config('mellatpay.callback'),
+            'callBackUrl' => $this->transaction->callback ?? config('mellatpay.callback'),
             'payerId' => $this->transaction->payerId,
             'description' => $this->transaction->description
         ];

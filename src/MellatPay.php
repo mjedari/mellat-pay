@@ -284,6 +284,8 @@ class MellatPay extends Gateway
             throw new NotFoundTransaction();
         }
 
+        $transaction = $transaction->forceFill(['callback' => $this->callback]);
+        
         return new TransactionService($transaction);
     }
 
@@ -379,7 +381,12 @@ class MellatPay extends Gateway
             'updated_at' 	=> now(),
         ];
 
-        $this->transaction = $this->payable->transactions()->create($data);
+        if ($this->payable) {
+            $this->transaction = $this->payable->transactions()->create($data);
+            return $this->transaction;
+        }
+
+        $this->transaction = Transaction::create($data);
         return $this->transaction;
     }
 

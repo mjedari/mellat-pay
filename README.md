@@ -1,11 +1,10 @@
-# Iranian Mellat bank dedicated gateway
+![](https://raw.githubusercontent.com/mjedari/mellat-pay/master/art/banner.png)
+# Iranian Mellat bank full online payment service
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/mjedari/mellat-pay.svg?style=flat-square)](https://packagist.org/packages/mjedari/mellat-pay)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/mjedari/mellat-pay/run-tests?label=tests)](https://github.com/mjedari/mellat-pay/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/mjedari/mellat-pay/Check%20&%20fix%20styling?label=code%20style)](https://github.com/mjedari/mellat-pay/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/mjedari/mellat-pay.svg?style=flat-square)](https://packagist.org/packages/mjedari/mellat-pay)
-
-![](https://raw.githubusercontent.com/mjedari/mellat-pay/master/art/logo.jpg)
 
 Dedicated laravel package for Behpadakht Mellat bank payment service.
 
