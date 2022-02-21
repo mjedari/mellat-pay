@@ -1,4 +1,4 @@
-<?php
+git<?php
 
 namespace Mjedari\MellatPay;
 
@@ -33,6 +33,11 @@ class MellatPayServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/mellat-pay'),
             ], 'mellat-pay-lang');
+
+            // Publishing the migration file.
+            $this->publishes([
+                __DIR__.'/../database/migrations' => resource_path('database/migrations/mellat-pay'),
+            ], 'mellat-pay-migrations');
 
             // Registering package commands.
             $this->commands([

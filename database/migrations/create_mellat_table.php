@@ -22,7 +22,7 @@ return new class extends Migration {
             $table->id();
             $table->unsignedBigInteger('payer_id')->nullable();
             $table->nullableMorphs('payable');
-            $table->decimal('price', 15, 2);
+            $table->decimal('price', 16, 2);
             $table->string('ref_id', 100)->nullable();
             $table->string('tracking_code', 50)->nullable();
             $table->string('card_number', 50)->nullable();
